@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprendiendo VUE.js</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+
+        <p>{{texto}}</p>
+
+        <!-- 3) este ejemplo es para agregar una nueva fruta a nuestra lista actual, ademas se muestra la forma de enlazar HTML hacia nuestro JS -->
+        <input type="text" v-model="nuevaFruta">
+        <!-- **** Ambas Funcionan Igual ****  -->
+        <!-- v-on:click="AlgunMetodoQueCreamos" :: reacciona al click -->
+        <!-- @click="AlgunMetodoQueCreamos" :: reacciona al click y es un forma abreviada -->
+        <button @click="agregarFruta">Agregar</button>
+        <!-- 3) FIN -->
+
+        <ul>
+            <!-- v-for = es un ciclo FOR -->
+            <!-- v-if = es una condicional IF -->
+
+            
+            <!-- 1) este ejemplo es para leer un arreglo -->
+            <!-- <li v-for="fruta of frutas">{{fruta}}</li> -->
+
+            <!-- 2) este ejemplo es para leer un arreglo que contien objetos -->
+            <li v-for="fruta of frutas">
+                {{fruta.cantidad}} - {{fruta.nombre}}
+                <span v-if="fruta.cantidad === 0"> - Sin Stock</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="01.js"></script>
+</body>
+
+</html>

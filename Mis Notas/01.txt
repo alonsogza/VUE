@@ -1,0 +1,48 @@
+** Importante **
+
+1) Para usar VUE se requiere 
+	1.- Link con CND de VUE una linea antes del BODY y antes de nuestros archivos JS
+	2.- Tener un *div* que contenga todo, para este ejercicio se llama div con el id='app'
+	3.- Enlazar con dobles llaves {{-nombre de la propiedad-}} ej. <h1>{{titulo}}
+
+2) En nuestro archivo JS:
+	1.- siempre se usar:
+		el: -Nombre del ID-
+		data: -se ponen los datos-
+
+	ejemplo:
+const app = new Vue({
+    el: '#app',
+    data: {
+        titulo: 'Hola mundo con Vue, aprendiendo este FrameWork :)'
+    }
+})
+
+**** tanto el 'el' como el 'data' es una manera para enlazar nuestro archivo JS con el HTML
+ 
+
+3) Para enlazar nuestro HTML con el JS usamos el v-model
+	ejemplo:
+<--! HTML -->
+<input type="text" v-model="nuevaFruta"> 
+
+<--! JS --> 
+-- AGREGAMOS el metodo nuevaFruta:''
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        titulo: 'Hola mundo con Vue, aprendiendo este Framework :)',
+        texto: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+        // 1) ejemplo de arreglo
+        // frutas: ['Manzana', 'Pera', 'Platano']
+
+        // 2) ejemplo de arreglo que contiene objetos
+        frutas: [
+            {nombre: 'Pera', cantidad: 10},
+            {nombre: 'Manzana', cantidad: 0},
+            {nombre: 'Platano', cantidad: 11}            
+        ],
+        nuevaFruta:''
+    }
+})

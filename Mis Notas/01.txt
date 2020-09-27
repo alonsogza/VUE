@@ -3,7 +3,7 @@
 1) Para usar VUE se requiere 
 	1.- Link con CND de VUE una linea antes del BODY y antes de nuestros archivos JS
 	2.- Tener un *div* que contenga todo, para este ejercicio se llama div con el id='app'
-	3.- Enlazar con dobles llaves {{-nombre de la propiedad-}} ej. <h1>{{titulo}}
+	3.- Enlazar con dobles llaves {{-nombre de la propiedad-}} ej. <h1>{{titulo}}</h1>
 
 2) En nuestro archivo JS:
 	1.- siempre se usar:
@@ -23,8 +23,10 @@ const app = new Vue({
 
 3) Para enlazar nuestro HTML con el JS usamos el v-model
 	ejemplo:
+
 <--! HTML -->
 <input type="text" v-model="nuevaFruta"> 
+
 
 <--! JS --> 
 -- AGREGAMOS el metodo nuevaFruta:''
@@ -46,3 +48,10 @@ const app = new Vue({
         nuevaFruta:''
     }
 })
+
+4) Para enlazar nuestro HTML con el JS usamos el v-model 
+ademas agregamos el NUMBER para que reconozca que es numerico, nos queda de la siguiente manera:
+
+<--! HTML -->
+<input type="number" v-model.number="fruta.cantidad">
+

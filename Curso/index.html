@@ -58,10 +58,15 @@
             <!-- 4) este ejemplo es para agregar un input en la cantidad -->
             <li v-for="fruta of frutas">
                 <input type="number" v-model.number="fruta.cantidad">
+                <!-- 5) este ejemplo es para agregar los botones de incrementar y decremento -->
+                <button @click="fruta.cantidad = fruta.cantidad - 1">-</button>
                 {{fruta.nombre}}
+                <button @click="fruta.cantidad++">+</button>
                 <span v-if="fruta.cantidad === 0"> - Sin Stock</span>
             </li>
         </ul>
+         <!-- 6) este ejemplo es para agregar una funcion para sumarFrutas las cantidades -->
+        <h4>TOTAL : {{sumarFurtas}}</h4>
     </div>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->

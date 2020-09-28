@@ -13,7 +13,8 @@ const app = new Vue({
             {nombre: 'Platano', cantidad: 11}            
         ],
         nuevaFruta:'',
-        cantidadFruta: 0
+        cantidadFruta: 0, //La utilizo para agregar una fruta con una cantidad
+        total: 0 //Se usa en el computed
     },
     methods:{
         agregarFruta (){
@@ -32,6 +33,19 @@ const app = new Vue({
         otroMetodo (){
             console.log(`Metodo Vacio, ahorita esta de ocio`);
             alert(`Click en el boton`);
+        }
+    },
+    // 6) este ejemplo es para agregar una funcion para sumarFrutas pero es usando COMPUTED
+    // computed: Una vez que se modifica una propiedad de la cual esta en el COMPUTED, esta de forma automatica 
+    // nos realiza la suma, ya que reconoce que una de las propiedades de la fruta se ha modificado.
+    computed:{
+        sumarFurtas(){
+            this.total = 0;
+            for(fruta of this.frutas){
+                // un recorrido normal del arrego ( frutas )
+                this.total += parseInt(fruta.cantidad);
+            }
+            return this.total; //Se regresa la sumatoria
         }
     }
 })

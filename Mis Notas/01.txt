@@ -55,3 +55,10 @@ ademas agregamos el NUMBER para que reconozca que es numerico, nos queda de la s
 <--! HTML -->
 <input type="number" v-model.number="fruta.cantidad">
 
+5) Agregar el boton de restar(-) y sumar (+)
+lo que contiene despues del @click es javascript puro, en este ejemplo estamos sumando uno
+<--! HTML -->
+<button @click="fruta.cantidad = fruta.cantidad - 1">-</button>
+<button @click="fruta.cantidad++">+</button>
+
+6) Se utiliza el COMPUTED, Una vez que se modifica una propiedad de la cual esta en el COMPUTED, esta de forma automatica nos realiza la suma, ya que reconoce que una de las propiedades de la fruta se ha modificado.

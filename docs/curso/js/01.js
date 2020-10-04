@@ -14,7 +14,18 @@ const app = new Vue({
         ],
         nuevaFruta:'',
         cantidadFruta: 0, //La utilizo para agregar una fruta con una cantidad
-        total: 0 //Se usa en el computed
+        total: 0, //Se usa en el computed
+        //-- Mis Notas de lo que se aplica --
+        aplica: [
+            {tip: 'v-on:click / @click'},
+            {tip: 'v-model'},
+            {tip: 'v-model.number'},
+            {tip: '@keyup.enter'},
+            {tip: 'v-for'},
+            {tip: 'v-if'},
+            {tip: 'methods'},
+            {tip: 'computed'},
+        ]
     },
     methods:{
         agregarFruta (){

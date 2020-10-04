@@ -11,8 +11,10 @@
 <body>
     <div id="app">
         <h1>{{titulo}}</h1>
-
-        <button @click="otroMetodo">Consola y Alert</button>
+        <!-- **** Ambas Funcionan Igual ****  -->
+        <!-- v-on:click="AlgunMetodoQueCreamos" :: reacciona al click -->
+        <!-- @click="AlgunMetodoQueCreamos" :: reacciona al click y es un forma abreviada -->
+        <button v-on:click="otroMetodo">Consola y Alert</button>
         <br>
 
         <p>{{texto}}</p>
@@ -39,13 +41,9 @@
         <!-- @click="AlgunMetodoQueCreamos" :: reacciona al click y es un forma abreviada -->
         <button @click="agregarFruta">Agregar</button>
         <!-- 3) FIN -->
-
-        
-
         <ul>
             <!-- v-for = es un ciclo FOR -->
             <!-- v-if = es una condicional IF -->
-
             
             <!-- 1) este ejemplo es para leer un arreglo -->
             <!-- <li v-for="fruta of frutas">{{fruta}}</li> -->
@@ -68,8 +66,14 @@
         </ul>
          <!-- 6) este ejemplo es para agregar una funcion para sumarFrutas las cantidades -->
         <h4>TOTAL : {{sumarFurtas}}</h4>
+        <hr>
+        <p>En este ejercicio se aplica: </p>
+        <ul>
+            <li v-for="concepto of aplica">
+                {{concepto.tip}}
+            </li>
+        </ul>
     </div>
-
     <div>
         <a href="../index.html">Regresar</a>
     </div>

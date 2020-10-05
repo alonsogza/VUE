@@ -17,6 +17,7 @@ const app = new Vue({
         total: 0, //Se usa en el computed
         //-- Mis Notas de lo que se aplica --
         aplica: [
+            {tip: 'usando arreglos y objetos JSON en las listas'},
             {tip: 'v-on:click / @click'},
             {tip: 'v-model'},
             {tip: 'v-model.number'},
@@ -25,7 +26,8 @@ const app = new Vue({
             {tip: 'v-if'},
             {tip: 'methods'},
             {tip: 'computed'},
-        ]
+        ],
+        miarreglo: ['batman', 'superman', 'x-men', 'four fantastic', 'spiderman']
     },
     methods:{
         agregarFruta (){

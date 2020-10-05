@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,47 @@
     <link rel="icon" href="img/logo_vuejs.png" type="image/icon type">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
     <div id="app" class="container mt-5">
-        <h1>{{titulo}}</h1>        
+        <h1>{{titulo}}</h1>
         <div class="row">
             <div class="col">
                 <!-- Para aplicar una clase con VUE es: -->
                 <!-- :class="['xxxxx', 'yyyy', zzzzz]" -->
-                    <!-- TIP: se inicia con DOS PUNTOS <class> y Encerradas entre comillas Dobles y comillas simples // Para UNA Clase -->
-                    <!-- Ejemplo -->
-                    <!-- <div class="bg-danger" :class="'p-3'"> // Aqui se pone el -->
+                <!-- TIP: se inicia con DOS PUNTOS <class> y Encerradas entre comillas Dobles y comillas simples // Para UNA Clase -->
+                <!-- Ejemplo -->
+                <!-- <div class="bg-danger" :class="'p-3'"> // Aqui se pone el -->
 
-                    <!-- TIP: se inicia con DOS PUNTOS, Corchetas y Encerradas entre comillas Dobles y comillas simples // Para VARIAS Clases -->
-                    <!-- Ejemplo -->                    
-                    <!-- <div class="bg-danger" :class="['p-3', 'text-white' ]"></div> -->
+                <!-- TIP: se inicia con DOS PUNTOS, Corchetas y Encerradas entre comillas Dobles y comillas simples // Para VARIAS Clases -->
+                <!-- Ejemplo -->
+                <!-- <div class="bg-danger" :class="['p-3', 'text-white' ]"></div> -->
 
-                    <!-- Para este ejercicio, se crea pone el fondo dinamico -->                    
+                <!-- Para este ejercicio, se crea pone el fondo dinamico -->
                 <div :class="['p-3', 'text-white', fondo ]">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorum maiores, explicabo suscipit porro, veritatis inventore cupiditate quod facere ullam aspernatur consequatur cum asperiores voluptatem omnis magnam ad earum quia laudantium repudiandae quis molestias. Numquam quasi soluta ipsum praesentium temporibus? Non ab expedita consectetur omnis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolorum maiores, explicabo
+                        suscipit porro, veritatis inventore cupiditate quod facere ullam aspernatur consequatur cum
+                        asperiores voluptatem omnis magnam ad earum quia laudantium repudiandae quis molestias. Numquam
+                        quasi soluta ipsum praesentium temporibus? Non ab expedita consectetur omnis!</p>
                 </div>
+                <!-- Aquí vinculamos el fondo para cambiar el div (ejercicio)-->
+                <label for="clase" class="mt-3">Escribe una clase de bootstrap para aplicar en el div superior</label>
+                <input type="text" class="form-control my-3" v-model="fondo" id="clase">
+
+                <!-- Agregamos otro parrafo y en este caso en la clase de VUE (:class="") va recibir un objeto 
+                    y la clase bg-info se va INCLUIR  cuando sea color sea VERDADERO -->
+                <!-- <div class="text-white p-3" :class="{'bg-info' : color}"> -->
+
+                <!-- En esta linea de codigo, lo que dice es, SI color es verdadero se agrega bg-info, en caso de lo contrario  
+                coloca bg-success -->
+                <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color }">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At mollitia numquam obcaecati iste
+                        officia facilis nobis architecto eum totam voluptas.</p>
+                </div>
+
+                <!-- Adentro del evento click (@click=) se esta agregando codigo PURO de JavaScript
+                en este caso se esta asignando COLOR igual al Opuesto de COLOR -->
+                <button class="btn btn-primary" @click="color = !color" >Cambiar</button>
             </div>
         </div>
         <hr>
@@ -44,8 +67,9 @@
     </div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/02.js"></script>
 </body>
+
 </html>

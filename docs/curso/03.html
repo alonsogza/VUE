@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col">
                 <h3>{{titulo}}</h3>
+<<<<<<< HEAD
                 <label for="actividad">Actividad</label>
                 <!-- 
                     Las siguientes lineas funcionan EXACTAMENTE igual, simplemente es mas corto realizarlo con arroba ( @ )
@@ -40,6 +41,19 @@
                             </div>
                         </div>
                     </div>
+=======
+                <label for="actividad" >Actividad</label>
+                <!-- v-on:keyup.enter="agregarTarea"> -->
+                <input type="text" class="form-control my-3" id="actividad" v-model="nuevaTarea" @keyup.enter="agregarTarea">
+                <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
+                <div class="mt-3">
+                    <!-- con la linea <h5>{{nuevaTarea}}</h5> se observa que atrapa lo que se escribe en el Input -->
+                    <!-- <h5>{{nuevaTarea}}</h5> -->
+                    <ul class="li"></ul>
+                    <div class="alert alert-primary" role="alert">
+                        A simple primary alert—check it out!
+                      </div>
+>>>>>>> e1239f83ee93c6f791cd3d8dd56ea931c9d14390
                 </div>
             </div>
         </div>

@@ -8,11 +8,16 @@ const app = new Vue({
         aplica: [
             {tip: 'interpolacion {{titulo}} // de JS a HTML'},
             {tip: 'v-model="nuevaTarea" // de HTML a JS'},
+<<<<<<< HEAD
             {tip: 'v-on:click="fn" / @click="fn" // click con mouse activa funcion "agregarTarea" '},
             {tip: 'v-on:keyup.enter="fn" / @keyup.enter="fn" ("agregarTarea") // enter desde teclado activa funcion "agregarTarea" '},
             {tip: ':class[ ]" // clases de VUE'},
             {tip: 'methods:" // Metodos en JS'},            
             {tip: 'created:" // Creacion en JS ( uso del LocalStorage )'},                        
+=======
+            {tip: '@click="agregarTarea" // click al mouse'},
+            {tip: '@keyup.enter="agregarTarea" // enter desde teclado'},            
+>>>>>>> e1239f83ee93c6f791cd3d8dd56ea931c9d14390
         ]
 
     },
@@ -24,6 +29,7 @@ const app = new Vue({
                 estado: false
             });
             this.nuevaTarea = "";
+<<<<<<< HEAD
             // localStorage.setItem('gym-vue', JSON.stringify(this.tareas))
             this.actualizaStorage();
         },
@@ -54,6 +60,9 @@ const app = new Vue({
         }
         // console.log(datosDB);
 
+=======
+        }
+>>>>>>> e1239f83ee93c6f791cd3d8dd56ea931c9d14390
     }
 
 })

@@ -10,7 +10,7 @@ const app = new Vue({
             {tip: 'v-model="nuevaTarea" // de HTML a JS'},
             {tip: 'v-on:click="fn" / @click="fn" // click con mouse activa funcion "agregarTarea" '},
             {tip: 'v-on:keyup.enter="fn" / @keyup.enter="fn" ("agregarTarea") // enter desde teclado activa funcion "agregarTarea" '},
-            {tip: ':class[ ]" // clases de VUE'},
+            {tip: 'v-bind:class / :class[ ]" // clases con VUE'},
             {tip: 'methods:" // Metodos en JS'},            
             {tip: 'created:" // Creacion en JS ( uso del LocalStorage )'},                        
         ]

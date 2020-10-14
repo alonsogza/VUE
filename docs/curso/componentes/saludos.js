@@ -5,7 +5,7 @@ Vue.component('saludo',{
     template:`
         <div>
             <h3>{{titulo}}</h3>
-            <h4>Hola !!!</h4>
+            <h4>Hola, soy un componente !!!</h4>
         </div>            
         `,
         // IMPORTANTE, los template deben estar envueltos de un contenedor (div), siempre y cuando uses más de una etiqueta HTML

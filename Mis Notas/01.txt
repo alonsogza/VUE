@@ -62,3 +62,20 @@ lo que contiene despues del @click es javascript puro, en este ejemplo estamos s
 <button @click="fruta.cantidad++">+</button>
 
 6) Se utiliza el COMPUTED, Una vez que se modifica una propiedad de la cual esta en el COMPUTED, esta de forma automatica nos realiza la suma, ya que reconoce que una de las propiedades de la fruta se ha modificado.
+
+------  
+7) Abreviaciones:
+        v-bind Abreviado
+            <!-- full syntax -->
+            <a v-bind:href="url"> ... </a>
+
+            <!-- abreviado -->
+            <a :href="url"> ... </a>
+        
+        v-on Abreviado
+            <!-- full syntax -->
+            <a v-on:click="doSomething"> ... </a>
+
+            <!-- abreviado -->
+            <a @click="doSomething"> ... </a> 
+            

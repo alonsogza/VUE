@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo VUE.js - Comunicacion entre Componentes </title>
+    <link rel="icon" href="img/logo_vuejs.png" type="image/icon type">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container mt-5" id="app">
+        <div class="row">
+            <div class="col">
+                <!-- FUNCIONA IGUAL 
+                <h3>{{titulo}}</h3>                    
+                    Ó
+                <h3 v-text="titulo"></h3> -->
+                <h3 v-text="titulo"></h3>
+                <hr>
+                <p>{{mensaje}} Padre</p>
+                <padre></padre>
+                <p>Los <strong>PROPS</strong> nos permite tener comunicacion entre Componentes</p>
+                <p>Click al boton <strong>+</strong> para incrementar el valor y ver que se cambia entre los componentes</p>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-sm">
+                        <p>En este ejercicio se aplica: </p>
+                        <ul>
+                            <li v-for="concepto of aplica">
+                                {{concepto.tip}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <a class="btn btn-primary" href="../index.html">Regresar</a>
+                    </div>
+                </div>
+                <footer class="mt-3">
+                    <small class="form-text text-muted text-center">
+                        Esta página usa: Bootstrap v4.5.2 / jquery-3.5.1 / Vue.js v2.6.12
+                    </small>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <!-- Primero se carga los Componetes y despues el que crea la instancia -->    
+    <script src="componentes/07Padre.js"></script>
+    <script src="componentes/07Hijo.js"></script>
+    <script src="js/07.js"></script>
+</body>
+
+</html>

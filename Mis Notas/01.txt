@@ -79,3 +79,7 @@ lo que contiene despues del @click es javascript puro, en este ejemplo estamos s
             <!-- abreviado -->
             <a @click="doSomething"> ... </a> 
             
+
+------  
+Punto: que es VueX ( https://vuex.vuejs.org/ )
+Es una libreria para poder tener comunicacion entre componetes

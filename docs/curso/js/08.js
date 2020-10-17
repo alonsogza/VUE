@@ -1,7 +1,7 @@
 const app = new Vue({
     el: "#app",
     data: {
-        titulo: 'Comunicacion entre Componentes (De: Padre a Hijo)',
+        titulo: 'Comunicacion entre Componentes (De: Hijo a Padre)',
         mensaje: 'Componente',
         //-- Mis Notas de lo que se aplica --
         aplica: [
@@ -15,3 +15,10 @@ const app = new Vue({
     }        
 
 })
+
+/* 
+
+IMPORTANTE 02: dentro del template se puede ver el codgio HTML de color se requiere instalar
+la extension --> es6-string-html
+
+*/

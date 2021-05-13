@@ -1,0 +1,8 @@
+La informacion que aqui agrego fue obtenida del Curso de VUE por parte de DEVELOTECA
+
+** Ruta donde descargue el libro: vue-js-es.pdf
+https://riptutorial.com/Download/vue-js-es.pdf
+
+** Link de apoyo
+https://www.tutorialspoint.com/vuejs/index.htm
+

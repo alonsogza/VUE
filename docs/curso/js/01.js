@@ -47,6 +47,7 @@ const app = new Vue({
             {tip: 'v-if'},
             {tip: 'methods'},
             {tip: 'computed'},
+            {tip: 'v-cloak'}, // Lo uso para eliminar {{}} cuando la pagina esta cargando
         ],
         miarreglo: ['batman', 'superman', 'x-men', 'four fantastic', 'spiderman']
     },

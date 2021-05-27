@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprendiendo VUE.js - Ejercicio 01</title>
     <link rel="icon" href="img/logo_vuejs.png" type="image/icon type">
+    <style>
+        [v-v-cloak]{ display: none; }
+    </style>
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <h1>{{titulo}}</h1>
         <!-- **** Ambas Funcionan Igual ****  -->
         <!-- v-on:click="AlgunMetodoQueCreamos" :: reacciona al click -->

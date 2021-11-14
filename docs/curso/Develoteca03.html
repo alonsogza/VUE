@@ -17,7 +17,9 @@
                 <br><br>
                 <p>Valor B:</p>
                 <input v-model.number="valorB" type="number" >
-                <h1>{{ suma() }}</h1>
+                <h2>{{ suma() }}</h2>
+                <h2>{{ resta() }}</h2>
+                <h2>{{ multiplicar() }}</h2>
             </div>
         </div>
 
@@ -48,9 +50,13 @@
             },
             methods:{
                 suma: function(){
-
                     return "A+B es: " + (this.valorA + this.valorB) ;
-
+                },
+                resta: function(){
+                    return "A-B es: " + (this.valorA - this.valorB) ;
+                },
+                multiplicar: function(){
+                    return "AxB es: " + (this.valorA * this.valorB) ;
                 }
             }
         })

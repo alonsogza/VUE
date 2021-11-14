@@ -83,3 +83,9 @@ lo que contiene despues del @click es javascript puro, en este ejemplo estamos s
 ------  
 Punto: que es VueX ( https://vuex.vuejs.org/ )
 Es una libreria para poder tener comunicacion entre componetes
+ 
+------
+IMPORTANTE: Conocer la diferencia entre * Computado vs Metodo y * Computado vs Watch
+Explicado por VUEjs: https://es.vuejs.org/v2/guide/computed.html 
+
+Lo que entiendo, en este caso "computed y methods" ambos sirve exactamente igual, la diferencia se encuentra en que COMPUTED hace el uso de cache, mientras METHODS siempre lo ejecuta. 

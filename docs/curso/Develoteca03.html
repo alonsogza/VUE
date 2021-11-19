@@ -17,9 +17,11 @@
                 <br><br>
                 <p>Valor B:</p>
                 <input v-model.number="valorB" type="number" >
-                <h2>{{ suma() }}</h2>
-                <h2>{{ resta() }}</h2>
-                <h2>{{ multiplicar() }}</h2>
+                <hr>  
+                <h5 class='text-success'>{{ suma() }}</h5>
+                <h5 class='text-success'>{{ resta() }}</h5>
+                <h5 class='text-success'>{{ multiplicar() }}</h5>
+                <h5 class='text-success'>{{ division() }}</h5>
             </div>
         </div>
 
@@ -45,18 +47,28 @@
         const app = new Vue({
             el: '#app',
             data: {
-                valorA:0,
-                valorB:0
+                valorA:" ",
+                valorB:" "
             },
             methods:{
                 suma: function(){
-                    return "A+B es: " + (this.valorA + this.valorB) ;
+                    return "Suma: A+B es: " + (this.valorA + this.valorB) ;
                 },
                 resta: function(){
-                    return "A-B es: " + (this.valorA - this.valorB) ;
+                    return "Resta: A-B es: " + (this.valorA - this.valorB) ;
                 },
                 multiplicar: function(){
-                    return "AxB es: " + (this.valorA * this.valorB) ;
+                    return "Multiplicacion: AxB es: " + (this.valorA * this.valorB) ;
+                },
+                division: function(){
+                    let divisor = 1
+
+                    if ( this.valorB > 0) {
+                        divisor = this.valorB ;
+                    }
+
+                    return "Division: A/B es: " + (this.valorA / divisor) ;
+
                 }
             }
         })

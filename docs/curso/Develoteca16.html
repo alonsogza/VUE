@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprendiendo VUE.js - Ejercicio 16 Develoteca</title>
+    <link rel="icon" href="img/logo_vuejs.png" type="image/icon type">
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+</head>
+<body>
+    <div class="container">
+        <div id="app" class="miaplicacion mt-3">
+            <div class="row">
+                <div class="col">
+                    <header>Forma Parte del Capítulo 10: enrutador vue </header>
+                    <p>El libro es: vue-js-es.pdf</p>
+
+                    <!-- con el "router-link" cargamos los templates -->
+                    <router-link to="/inicio"> Inicio </router-link>
+                    <router-link to="/mision"> Mision </router-link>
+                    <router-link to="/vision"> Vision </router-link>
+
+                    <!-- Mostramos los templates -->
+                    <router-view> </router-view>
+                </div>
+            </div>
+
+
+            <div class="row mt-3">
+                <div class="col">
+                    <a class="btn btn-secondary" href="../index.html?#develoteca">
+                        <i class="far fa-arrow-alt-circle-left"></i> Regresar
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <footer class="mt-3">
+                        <small class="form-text text-muted text-center">
+                            Esta página usa: Bootstrap v4.5.2 / jQuery-3.5.1 / Vue.js v2.6.12 / Font Awesome 5.15.4 / vue-router.js v3.5.3
+                        </small>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/vue-router.js"></script>
+
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+        <!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+
+        <script>
+            const Inicio={ template:'<div class="alert alert-primary" role="alert"> Inicio (Portada)</div>' }
+            const Mision={ template:'<div class="alert alert-warning" role="alert"> Mision de la empresa</div>' }
+            const Vision={ template:'<div class="alert alert-danger" role="alert"> Vision de la empresa</div>' }
+
+            // Crea las Rutas
+            const router = new VueRouter({
+                routes:[
+                    { path:'/inicio', component:Inicio } , // Los nombres de los componentes debe ser IGUALES
+                    { path:'/mision', component:Mision } , // 
+                    { path:'/vision', component:Vision } , // 
+                ]
+            })
+
+            
+            const app = new Vue({
+                el: '#app',
+                // Con esto: "router" enlazamos las rutas dentro del DIV
+                router,
+            })
+
+        </script>
+
+</body>
+</html>

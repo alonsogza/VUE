@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprendiendo VUE.js - Ejercicio 19 Develoteca</title>
+    <link rel="icon" href="img/logo_vuejs.png" type="image/icon type">
+    <link rel="stylesheet" href="css/bootstrap.min.css">    
+</head>
+<body>
+    <div class="container">
+        <div id="app" class="miaplicacion">
+            <div class="row mt-3">
+                <template v-for="item in infoLista" :key="item.id">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <!-- <img v-bind:src="" alt="" class="card-img-top"> -->
+                            <img :src="'https://www.dailymotion.com/thumbnail/video/'+item.id" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.title }}</h5>
+                                <a v-bind:href="'https://www.dailymotion.com/video/'+item.id" class="btn btn-primary"
+                                    target="_blank">Reproducir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>                
+
+
+            <div class="row mt-3">
+                <div class="col">
+                    <a class="btn btn-secondary" href="../index.html?#develoteca">
+                        <i class="far fa-arrow-alt-circle-left"></i> Regresar
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <footer class="col mt-3">
+                    <small class="form-text text-muted text-center">
+                        Esta página usa: Bootstrap v4.5.2 / jQuery-3.5.1 / Vue.js v2.6.12 / Font Awesome 5.15.4 / Axios v0.19.2
+                    </small>
+                </footer>
+            </div>
+            
+        </div>
+    </div>       
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+
+
+    <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> -->
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                infoLista: [],
+            },
+            mounted() {
+                axios.get("https://api.dailymotion.com/videos?channel=news&limit=10")
+                    .then(respuesta => this.infoLista = respuesta.data.list)
+            },
+        })
+
+    </script>
+</body>
+
+</html>
